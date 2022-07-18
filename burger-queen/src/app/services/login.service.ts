@@ -16,7 +16,6 @@ export class LoginService {
   constructor(private http: HttpClient) { }
 
   postUsers(data: UsersLogin): Observable<any> {
-    console.log(data);
     return this.http.post<UsersLogin>(this.url,data);
   }
   isLoggedIn(){

@@ -7,7 +7,6 @@
     </div>
 
    <form [formGroup]="loginForm" (ngSubmit)="login()">
-    <!-- <div class="loginTitle">Login</div> -->
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Email</label>
       <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -23,11 +22,10 @@
       </div>
     </div>
     <button type="submit" class="btn" [disabled]="loginForm.invalid">Iniciar Sesión</button>
-    <!-- routerLink="/home" -->
    </form>
   </section>
 
 <figure>
-  <img src="../../../assets/img/hamburguesaDibujo.png" alt="Ex:Logotipo de tu empresa."/>
+  <img src="../../../assets/img/hamburguesaDibujo.png" alt="Imagen de hamburguesa"/>
 </figure>
 </section>

@@ -26,6 +26,7 @@ export class LoginComponent implements OnInit {
     this.loginService.postUsers(this.loginForm.value)
     .subscribe({
       next: (res) =>{
+        console.log("next de el servicio",res)
         if(res && res.user.roles.admin){
           this.toastr.success('Administrador', 'Logueado con exito');
           this.loginForm.reset();

@@ -21,18 +21,18 @@ export interface ProductsData {
 })
 export class HomeAdminUsersComponent implements OnInit {
   users: Users[] = [];
-  rolAdmin = 'administrador'
-  rolMesero = 'mesero'
-  rolChef = 'chef'
+  rolAdmin = 'administrador';
+  rolMesero = 'mesero';
+  rolChef = 'chef';
 
   constructor(private usersService: UsersService, private modalNewUser:MatDialog, private toastr: ToastrService) { }
 
   ngOnInit(): void {
-    this.getAllUsers();
+    this.getAllUsers()
   }
 
   getAllUsers(): void {
-    this.usersService.getUsersMethod().subscribe((users) => (this.users = users, console.log(users)));
+    this.usersService.getUsersMethod().subscribe((users) => (this.users = users));
   }
 
   deleteUsers(users: Users){
