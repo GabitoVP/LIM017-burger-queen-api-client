@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
+    console.log('funcion loginnnnnn')
     this.loginService.postUsers(this.loginForm.value)
     .subscribe({
       next: (res) =>{
