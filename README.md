@@ -1,56 +1,22 @@
 # Burger Queen (API Client)
-
 ## Índice
+* [1. Resumen del proyecto](#id1)
+* [2. Historias de usuario](#id2)
+* [3. Interfaz de usuario](#id3)
+* [4. Tecnologías usadas](#id4)
+* [5. Desarrolladoras](#id5)
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones](#4-consideraciones)
-* [5. Criterios de aceptación del proyecto](#5-criterios-de-aceptación-del-proyecto)
-* [6. Pistas / tips](#6-pistas--tips)
 
 ***
-
-## 1. Preámbulo
-
-[React](https://reactjs.org/) y [Angular](https://angular.io/)
-son algunos de los _frameworks_ y _librerías_ de JavaScript más utilizados por
-lxs desarrolladorxs alrededor del mundo, y hay una razón para eso.
-En el contexto del navegador, [_mantener la interfaz sincronizada con el estado
-es difícil_](https://medium.com/dailyjs/the-deepest-reason-why-modern-javascript-frameworks-exist-933b86ebc445).
-Al elegir un _framework_ o _librería_ para nuestra interfaz, nos apoyamos en una
-serie de convenciones e implementaciones _probadas_ y _documentadas_ para
-resolver un problema común a toda interfaz web. Esto nos permite concentrarnos
-mejor (dedicar más tiempo) en las características _específicas_ de
-nuestra aplicación.
-
-Cuando elegimos una de estas tecnologías no solo importamos un pedacito de
-código para reusarlo (lo cuál es un gran valor per se), si no que adoptamos una
-**arquitectura**, una serie de **principios de diseño**, un **paradigma**, unas
-**abstracciones**, un **vocabulario**, una **comunidad**, etc...
-
-Como desarrolladora Front-end, estos kits de desarrollo pueden resultarte
-de gran ayuda para implementar rápidamente características de los proyectos en
-los que trabajes.
-
-## 2. Resumen del proyecto
-
+## 📌 1. Resumen del proyecto <a name="id1"></a>
 Un pequeño restaurante de hamburguesas, que está creciendo, necesita un
 sistema a través del cual puedan tomar pedidos usando una _tablet_, y enviarlos
 a la cocina para que se preparen ordenada y eficientemente.
-
-![burger-queen](https://user-images.githubusercontent.com/110297/42118136-996b4a52-7bc6-11e8-8a03-ada078754715.jpg)
-
 Este proyecto tiene dos áreas: interfaz (cliente) y API (servidor). Nuestra
 clienta nos ha solicitado desarrollar la interfaz que se integre con la API
 que otro equipo de desarrolladoras está trabajando simultáneamente
-
-Esta vez tenemos un proyecto 100% por encargo. Si bien siempre puedes (y debes)
-hacer sugerencias de mejoras y/o cambios, muchas veces trabajarás en proyectos
-en los que primero hay que asegurarse de cumplir con lo requerido.
-
+Esta vez tenemos un proyecto 100% por encargo.
 Esta es la información que tenemos dxl clientx:
-
 > Somos **Burguer Queen**, una cadena de comida 24hrs.
 >
 > Nuestra propuesta de servicio 24hrs ha tenido muy buena acogida y, para
@@ -84,158 +50,102 @@ Esta es la información que tenemos dxl clientx:
 >
 > Nuestrxs clientxs son bastante indecisos, por lo que es muy común que cambien
 > el pedido varias veces antes de finalizarlo.
-
 La interfaz debe mostrar los dos menús (desayuno y resto del día), cada uno
 con todos sus _productos_. La usuaria debe poder ir eligiendo qué _productos_
 agregar y la interfaz debe ir mostrando el _resumen del pedido_ con el
 costo total.
-
-![out](https://user-images.githubusercontent.com/110297/45984241-b8b51c00-c025-11e8-8fa4-a390016bee9d.gif)
-
 Además la clienta nos ha dado un [link a la documentación](https://laboratoria.github.io/burger-queen-api/)
 que especifica el comportamiento esperado de la API HTTP que deberás consumir.
 Ahí puedes encontrar todos los detalles de los _endpoints_, como por ejemplo
 qué parámetros esperan, qué deben responder, etc.
 
-El objetivo principal de es aprender a construir una _interfaz web_ usando
-el _framework_ elegido (React o Angular). Todos estos frameworks de
-Front-end tratan de solucionar el mismo problema: **cómo mantener la interfaz
-y el estado sincronizados**. Así que esta experiencia espera familiarizarte con
-el concepto de _estado de pantalla_, y como cada cambio sobre el estado se va
-a ir reflejando en la interfaz (por ejemplo, cada vez que agregamos un _producto_
-a un _pedido_, la interfaz debe actualizar la lista del pedido y el total).
-
-#### [Historia de usuario 1] Mesero/a debe poder ingresar al sistema, si el admin ya le ha asignado credenciales
-
+#### 🍔 [Historia de usuario 1] Mesero/a debe poder ingresar al sistema, si el admin ya le ha asignado credenciales
 Yo como meserx quiero poder ingresar al sistema de pedidos.
-
 ##### Criterios de aceptación
-
 Lo que debe ocurrir para que se satisfagan las necesidades del usuario.
-
 * Acceder a una pantalla de login.
 * Ingresar email y contraseña.
 * Recibir mensajes de error comprensibles, dependiendo de cuál es el error
   con la información ingresada.
 * Ingresar al sistema de pedidos si las crendenciales son correctas.
-
 ##### Definición de terminado
-
 Lo acordado que debe ocurrir para decir que la historia está terminada.
-
 * Debes haber recibido _code review_ de al menos una compañera.
 * Haces _test_ unitarios y, además, has testeado tu producto manualmente.
 * Hiciste _tests_ de usabilidad e incorporaste el _feedback_ del usuario.
 * Desplegaste tu aplicación y has etiquetado tu versión (git tag).
-
 ***
-
-#### [Historia de usuario 2] Mesero/a debe poder tomar pedido de cliente/a
-
+#### 🍔 [Historia de usuario 2] Mesero/a debe poder tomar pedido de cliente/a
 Yo como meserx quiero tomar el pedido de unx clientx para no depender de mi mala
 memoria, para saber cuánto cobrar, y enviarlo a la cocina para evitar errores y
 que se puedan ir preparando en orden.
-
 ##### Criterios de aceptación
-
 Lo que debe ocurrir para que se satisfagan las necesidades del usuario
-
 * Anotar nombre de clientx.
 * Agregar productos al pedido.
 * Eliminar productos.
 * Ver resumen y el total de la compra.
 * Enviar pedido a cocina (guardar en alguna base de datos).
 * Se ve y funciona bien en una _tablet_
-
 ##### Definición de terminado
-
 Lo acordado que debe ocurrir para decir que la historia está terminada.
-
 * Debes haber recibido _code review_ de al menos una compañera.
 * Haces _test_ unitarios y, además, has testeado tu producto manualmente.
 * Hiciste _tests_ de usabilidad e incorporaste el _feedback_ del usuario.
 * Desplegaste tu aplicación y has etiquetado tu versión (git tag).
-
 ***
-
-#### [Historia de usuario 3] Jefe de cocina debe ver los pedidos
-
+#### 🍔 [Historia de usuario 3] Jefe de cocina debe ver los pedidos
 Yo como jefx de cocina quiero ver los pedidos de lxs clientxs en orden y
 marcar cuáles están listos para saber qué se debe cocinar y avisar a lxs meserxs
 que un pedido está listo para servirlo a un clientx.
-
 ##### Criterios de aceptación
-
 * Ver los pedidos ordenados según se van haciendo.
 * Marcar los pedidos que se han preparado y están listos para servirse.
 * Ver el tiempo que tomó prepara el pedido desde que llegó hasta que se
   marcó como completado.
-
 ##### Definición de terminado
-
 * Debes haber recibido _code review_ de al menos una compañera.
 * Haces _test_ unitarios y, además, has testeado tu producto manualmente.
 * Hiciste _tests_ de usabilidad e incorporaste el _feedback_ del usuario.
 * Desplegaste tu aplicación y has etiquetado tu versión (git tag).
-
 ***
-
-#### [Historia de usuario 4] Meserx debe ver pedidos listos para servir
-
+#### 🍔 [Historia de usuario 4] Meserx debe ver pedidos listos para servir
 Yo como meserx quiero ver los pedidos que están preparados para entregarlos
 rápidamente a lxs clientxs que las hicieron.
-
 ##### Criterios de aceptación
-
 * Ver listado de pedido listos para servir.
 * Marcar pedidos que han sido entregados.
-
 ##### Definición de terminado
-
 * Debes haber recibido _code review_ de al menos una compañera.
 * Haces _test_ unitarios y, además, has testeado tu producto manualmente.
 * Hiciste _tests_ de usabilidad e incorporaste el _feedback_ del usuario.
 * Desplegaste tu aplicación y has etiquetado tu versión (git tag).
 * Los datos se deben mantener íntegros, incluso después de que un pedido ha
   terminado. Todo esto para poder tener estadísticas en el futuro.
-
 ***
-
-#### [Historia de usuario 5] Administrador(a) de tienda debe administrar a sus trabajadorxs
-
+#### 🍔 [Historia de usuario 5] Administrador(a) de tienda debe administrar a sus trabajadorxs
 Yo como administrador(a) de tienda quiero gestionar a los usuarios de
 la plataforma para mantener actualizado la informacion de mis trabajadorxs.
-
 ##### Criterios de aceptación
-
 * Ver listado de trabajadorxs.
 * Agregar trabajadorxs.
 * Eliminar trabajadoxs.
 * Actualizar datos de trabajadorxs.
-
 ##### Definición de terminado
-
 * Debes haber recibido _code review_ de al menos una compañera.
 * Haces _test_ unitarios y, además, has testeado tu producto manualmente.
 * Hiciste _tests_ de usabilidad e incorporaste el _feedback_ del usuario.
 * Desplegaste tu aplicación y has etiquetado tu versión (git tag).
-
 ***
-
-#### [Historia de usuario 6] Administrador(a) de tienda debe administrar a sus productos
-
+#### 🍔 [Historia de usuario 6] Administrador(a) de tienda debe administrar a sus productos
 Yo como administrador(a) de tienda quiero gestionar los productos
 para mantener actualizado el menú.
-
 ##### Criterios de aceptación
-
 * Ver listado de productos.
 * Agregar productos.
 * Eliminar productos.
 * Actualizar datos de productos.
-
 ##### Definición de terminado
-
 * Debes haber recibido _code review_ de al menos una compañera.
 * Haces _test_ unitarios y, además, has testeado tu producto manualmente.
 * Hiciste _tests_ de usabilidad e incorporaste el _feedback_ del usuario.
